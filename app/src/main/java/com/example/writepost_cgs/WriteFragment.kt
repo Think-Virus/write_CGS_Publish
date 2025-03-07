@@ -79,12 +79,6 @@ class WriteFragment() : Fragment() {
         val naverClientName = BuildConfig.NAVER_CLIENT_NAME
         NaverIdLoginSDK.initialize((activity as MainActivity), naverClientId, naverClientSecret, naverClientName)
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://openapi.naver.com/")
-            .addConverterFactory(GsonConverterFactory.create())
-            .build()
-        val retrofitService = retrofit.create(RetrofitService::class.java)
-
         val glide = Glide.with(this)
         imagePickerLauncher =
             registerForActivityResult(ActivityResultContracts.StartActivityForResult()) {

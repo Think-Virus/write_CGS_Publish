@@ -16,12 +16,6 @@ interface RetrofitService {
     @Multipart
     @POST("v1/cafe/{clubid}/menu/{menuid}/articles")
     fun uploadPost(
-//        @HeaderMap headers: Map<String, String>,
-//        @Path("clubid") clubid: Int = 24082687,
-//        @Path("menuid") menuid: Int = 454,
-//        @Part image: MultipartBody.Part,
-//        @Part("subject") subject: RequestBody,
-//        @Part("content") content: RequestBody
         @HeaderMap headers: Map<String, String>,
         @Path("clubid") clubid: Int = 24082687,
         @Path("menuid") menuid: Int = 454,
